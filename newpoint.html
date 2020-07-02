@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<htm lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widht=device=widht, initial-scale=1.0">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/newpoint.css">
+        <link rel="stylesheet" href="/css/responsive.css">
+        <title>Cadastrar Ponto de Ecoleta</title>
+    </head>
+
+    <body>
+
+        <div id="newpoint">
+            <header>
+                <img src="/icones/logo.svg" alt="logomarca">
+                <a href="/index.html">
+                    <span></span>
+                    Voltar para home
+                </a>
+            </header>
+
+            <form action="">
+                <h1>Cadastro do Ponto de Coleta</h1>
+                <fieldset>
+                    <legend>
+                        <h2>Dados Cadastrais</h2>
+                    </legend>
+
+                    <div class="field">
+                        <label for="name">Nome da Entidade</label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="address">Endereço</label>
+                            <input type="text" name="address" required>
+                        </div>
+                        <div class="field">
+                            <label for="number">Numero/complemento</label>
+                            <input type="text" name="address2" required>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="state">Estado</label>
+                            <select name="uf">
+                                <option value="">Selecione o Estado</option>
+                                
+                            </select>
+                            <input type="hidden" name="state" required>
+                        </div>
+                        <div class="field">
+                            <label for="city">Cidade</label>
+                            <select name="city" disabled>
+                                <option value="">Selecione a Cidade</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        <h2>Itens de Coleta</h2>
+                    </legend>
+
+                    <div class="items-grid">
+                        <li data-id="item-1"><img src="/icones/lampadas.svg" alt="lampadas">
+                            <span>lampadas</span>
+                        </li>
+                        <li data-id="item-2"><img src="/icones/baterias.svg" alt="Baterias">
+                            <span>Baterias</span>
+                        </li>
+                        <li data-id="item-3"><img src="/icones/papeis-papelao.svg" alt="Papeis e Papelão">
+                            <span>Papeis e Papelão</span>
+                        </li>
+                        <li data-id="item-4"><img src="/icones/eletronicos.svg" alt="Residuis Eletronicos">
+                            <span>Residuis Eletronicos</span>
+                        </li>
+                        <li data-id="item-5"><img src="/icones/organicos.svg" alt="Residuos Organicos">
+                            <span>Residuos Organicos</span>
+                        </li>
+                        <li data-id="item-6"><img src="/icones/oleo.svg" alt="Oleo de Cozinha">
+                            <span>Oleo de Cozinha</span>
+                        </li>
+                    </div>
+
+                    <input type="hidden" name="items">
+                            
+                </fieldset>
+
+                
+
+                <button type="submit">Cadastrar novo Ponto</button>
+            </form>
+        </div>
+
+        <script src="/scripts/newPoint.js"></script>
+    </body>
+
+    </html>
